@@ -1,49 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
+
     <div class="container">
         <h1>Registration Form</h1>
 
         <div>
             <label for="">Full Name</label><br>
-            <input type="text">
+            <input type="text" id="fullname">
         </div>
 
         <div>
             <label for="">Email</label><br>
-            <input type="text">
+            <input type="text" id="email">
         </div>
         <div>
             <label>Choose your favorite Web language</label><br>
-
-            <input type="radio" name="Web language"> <label for="">HTML</label>
-            <input type="radio" name="Web language" id=""> <label for="">CSS</label>
-            <input type="radio" name="Web language" id=""> <label for="">JavaScript</label>
-
+            <input type="radio" name="Web" value="HTML" id=""> <label for="">HTML</label>
+            <input type="radio" name="Web" value="CSS" id=""> <label for="">CSS</label>
+            <input type="radio" name="Web" value="JavaScript" id=""> <label for="">JavaScript</label>
         </div>
-
         <div class="favColor">
             <label for="">Favourite Color: </label>
-            <input type="checkbox" name="Color"><label for="">Black</label>
-            <input type="checkbox" name="Color"> <label for="">blue</label>
-            <input type="checkbox" name="Color" id=""> <label for="">green</label>
-
+            <input type="checkbox" name="Color" id="" value="Black"><label for="">Black</label>
+            <input type="checkbox" name="Color" id="" value="blue"> <label for="">blue</label>
+            <input type="checkbox" name="Color" id="" value="green"> <label for="">green</label>
         </div>
-
-
         <div class="dropDown">
             <label for="">Select Branch</label>
-            <select name="" id="">
-                <option value="">CSE</option>
-                <option value="">ECE</option>
-                <option value="">MECH</option>
+            <select name="Branch" id="Branch">
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="MECH">MECH</option>
             </select>
         </div>
 
@@ -53,11 +49,10 @@
 
     </div>
 
-    <div class="" id="res">
-
-    </div>
+    <div class="" id="res"></div>
 
     <script src="app.js"></script>
 
 </body>
+
 </html>
