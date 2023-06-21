@@ -117,8 +117,38 @@ function Aadhaar() {
 
 function DOB() {
     let dob = document.getElementById('dob')
-    alert(dob.value[dob.value.length - 1])
 
+    // Date object
+    const date = new Date();
+    let currentDay= String(date.getDate()).padStart(2, '0');
+    let currentMonth = String(date.getMonth()+1).padStart(2,"0");
+    let currentYear = date.getFullYear();
+    let currentDate = currentYear + "-" + currentMonth + "-" + currentDay;
+    
+    if (ageCal(dob.value, currentDate) < 18) {
+        error7.innerHTML = '*age must be greater than 17'
+    }
+    else {
+        error7.innerHTML = ''
+    }
+
+}
+
+function ageCal(s, current) {
+    s = s.trim()
+    current = current.trim()
+    let age = parseInt(current.substring(2, 4)) - parseInt(s.substring(2, 4)) - 1;
+
+    if (parseInt(current.substring(5, 7)) > parseInt(s.substring(5, 7))) {
+        age++;
+    }
+    if (parseInt(current.substring(5, 7)) === parseInt(s.substring(5, 7))) {
+        if (parseInt(current.substring(8, 10)) > parseInt(s.substring(8, 10))) {
+        age++;
+        }
+    }
+    
+    return age;
 }
 
 
